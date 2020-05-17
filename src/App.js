@@ -10,7 +10,13 @@ function App() {
   const [completed, setCompleted] = useState([])
 
   const getNewCurrent = () => {
-    setCurrentName(gameArray.find(elem => (!elem.completed && elem.name !== currentName)).name)
+    const currentObject = gameArray.find(elem => (!elem.completed && elem.name !== currentName))
+    if (currentObject) {
+      setCurrentName(currentObject.name)
+    }
+    else{
+      setCurrentName("BRA JOBBAT")
+    }
   }
 
   const clickFunc = (e) => {
@@ -26,7 +32,7 @@ function App() {
       <div className="wrapper">
         <QuestionComponent currentName={currentName} />
         <div className="landskap-div">
-          <Landskap clickFunc={clickFunc} setGameArray={setGameArray} completed={completed}/>
+          <Landskap clickFunc={clickFunc} setGameArray={setGameArray} completed={completed} />
         </div>
         <AnswerComponent gameArray={gameArray} currentName={currentName} />
       </div>

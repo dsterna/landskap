@@ -11,15 +11,14 @@ const Landskap = (props) => {
    const Skane = () => {
       const id = "Skane"
       const notComplete = !props.completed.includes(id)
-      return (
-         <path
-            id={id}
-            style={{ zIndex: '100' }}
-            onMouseOver={() => {notComplete && setHovered(id) }}
-            onMouseLeave={() => {notComplete &&  setHovered('') }}
-            onClick={props.clickFunc}
-            fill={notComplete ? hovered === id ? HOVER_COLOR : FILL_COLOR : COMPLETE_COLOR}
-            d="M 322.00,2457.00
+      return <path
+         id={id}
+         style={{ zIndex: '100' }}
+         onMouseOver={() => { notComplete && setHovered(id) }}
+         onMouseLeave={() => { notComplete && setHovered('') }}
+         onClick={props.clickFunc}
+         fill={notComplete ? hovered === id ? HOVER_COLOR : FILL_COLOR : COMPLETE_COLOR}
+         d="M 322.00,2457.00
             C 320.90,2460.50 319.45,2465.00 316.48,2467.40
               313.87,2469.52 311.06,2468.74 308.00,2469.21
               308.00,2469.21 299.42,2471.97 299.42,2471.97
@@ -87,17 +86,18 @@ const Landskap = (props) => {
               365.26,2478.25 366.65,2475.02 368.00,2472.00
               360.95,2468.34 348.84,2464.58 341.00,2463.00
               334.16,2467.18 327.86,2458.85 322.00,2457.00 Z"
-         />
-      )
+      />
    }
    const Blekinge = () => {
       const id = "Blekinge"
+      const notComplete = !props.completed.includes(id)
       return <path
          id={id}
-         onMouseOver={() => { setHovered(id) }}
-         onMouseLeave={() => { setHovered('') }}
+         style={{ zIndex: '100' }}
+         onMouseOver={() => { notComplete && setHovered(id) }}
+         onMouseLeave={() => { notComplete && setHovered('') }}
          onClick={props.clickFunc}
-         fill={hovered === id ? HOVER_COLOR : FILL_COLOR}
+         fill={notComplete ? hovered === id ? HOVER_COLOR : FILL_COLOR : COMPLETE_COLOR}
          d="M 473.00,2463.00
          C 473.00,2463.00 473.00,2469.00 473.00,2469.00
            463.29,2466.39 459.38,2463.02 452.00,2473.00
@@ -147,12 +147,14 @@ const Landskap = (props) => {
    }
    const Oland = () => {
       const id = "Oland"
+     const notComplete = !props.completed.includes(id)
       return <path
          id={id}
-         onMouseOver={() => { setHovered(id) }}
-         onMouseLeave={() => { setHovered('') }}
+         style={{ zIndex: '100' }}
+         onMouseOver={() => { notComplete && setHovered(id) }}
+         onMouseLeave={() => { notComplete && setHovered('') }}
          onClick={props.clickFunc}
-         fill={hovered === id ? HOVER_COLOR : FILL_COLOR}
+         fill={notComplete ? hovered === id ? HOVER_COLOR : FILL_COLOR : COMPLETE_COLOR}
          d="M 602.00,2388.00
          C 599.05,2388.03 595.75,2387.82 593.27,2389.74
            590.52,2391.87 589.48,2396.78 588.31,2400.00
@@ -191,12 +193,14 @@ const Landskap = (props) => {
    }
    const Smaland = () => {
       const id = "Smaland"
+     const notComplete = !props.completed.includes(id)
       return <path
          id={id}
-         onMouseOver={() => { setHovered(id) }}
-         onMouseLeave={() => { setHovered('') }}
+         style={{ zIndex: '100' }}
+         onMouseOver={() => { notComplete && setHovered(id) }}
+         onMouseLeave={() => { notComplete && setHovered('') }}
          onClick={props.clickFunc}
-         fill={hovered === id ? HOVER_COLOR : FILL_COLOR}
+         fill={notComplete ? hovered === id ? HOVER_COLOR : FILL_COLOR : COMPLETE_COLOR}
          d="M 542.00,2137.00
            C 542.00,2137.00 538.13,2154.00 538.13,2154.00
              538.13,2154.00 534.70,2160.97 534.70,2160.97
@@ -322,12 +326,14 @@ const Landskap = (props) => {
    }
    const Gotland = () => {
       const id = "Gotland"
+     const notComplete = !props.completed.includes(id)
       return <path
          id={id}
-         onMouseOver={() => { setHovered(id) }}
-         onMouseLeave={() => { setHovered('') }}
+         style={{ zIndex: '100' }}
+         onMouseOver={() => { notComplete && setHovered(id) }}
+         onMouseLeave={() => { notComplete && setHovered('') }}
          onClick={props.clickFunc}
-         fill={hovered === id ? HOVER_COLOR : FILL_COLOR}
+         fill={notComplete ? hovered === id ? HOVER_COLOR : FILL_COLOR : COMPLETE_COLOR}
          d="M 809.00,2201.00
          C 809.00,2201.00 802.00,2185.00 802.00,2185.00
            799.09,2186.64 795.80,2188.37 793.85,2191.18
@@ -379,12 +385,14 @@ const Landskap = (props) => {
    }
    const Halland = () => {
       const id = "Halland"
+     const notComplete = !props.completed.includes(id)
       return <path
          id={id}
-         onMouseOver={() => { setHovered(id) }}
-         onMouseLeave={() => { setHovered('') }}
+         style={{ zIndex: '100' }}
+         onMouseOver={() => { notComplete && setHovered(id) }}
+         onMouseLeave={() => { notComplete && setHovered('') }}
          onClick={props.clickFunc}
-         fill={hovered === id ? HOVER_COLOR : FILL_COLOR}
+         fill={notComplete ? hovered === id ? HOVER_COLOR : FILL_COLOR : COMPLETE_COLOR}
          d="M 109.04,2250.82
          C 109.04,2250.82 109.04,2260.58 109.04,2260.58
            108.41,2268.10 103.39,2269.28 108.43,2282.00
@@ -439,12 +447,14 @@ const Landskap = (props) => {
    }
    const VasterGotland = () => {
       const id = "VasterGotland"
+     const notComplete = !props.completed.includes(id)
       return <path
          id={id}
-         onMouseOver={() => { setHovered(id) }}
-         onMouseLeave={() => { setHovered('') }}
+         style={{ zIndex: '100' }}
+         onMouseOver={() => { notComplete && setHovered(id) }}
+         onMouseLeave={() => { notComplete && setHovered('') }}
          onClick={props.clickFunc}
-         fill={hovered === id ? HOVER_COLOR : FILL_COLOR}
+         fill={notComplete ? hovered === id ? HOVER_COLOR : FILL_COLOR : COMPLETE_COLOR}
          d="M 296.00,2011.00
          C 293.09,2019.67 299.17,2016.68 300.00,2027.00
            307.60,2024.27 307.81,2022.00 316.00,2025.00
@@ -536,12 +546,14 @@ const Landskap = (props) => {
    }
    const OsterGotland = () => {
       const id = "OsterGotland"
+     const notComplete = !props.completed.includes(id)
       return <path
          id={id}
-         onMouseOver={() => { setHovered(id) }}
-         onMouseLeave={() => { setHovered('') }}
+         style={{ zIndex: '100' }}
+         onMouseOver={() => { notComplete && setHovered(id) }}
+         onMouseLeave={() => { notComplete && setHovered('') }}
          onClick={props.clickFunc}
-         fill={hovered === id ? HOVER_COLOR : FILL_COLOR}
+         fill={notComplete ? hovered === id ? HOVER_COLOR : FILL_COLOR : COMPLETE_COLOR}
          d="M 505.00,1979.00
          C 505.00,1979.00 500.00,1990.00 500.00,1990.00
            497.97,1989.05 494.11,1987.24 492.00,1986.84
@@ -621,12 +633,14 @@ const Landskap = (props) => {
    }
    const Dalsland = () => {
       const id = "Dalsland"
+     const notComplete = !props.completed.includes(id)
       return <path
          id={id}
-         onMouseOver={() => { setHovered(id) }}
-         onMouseLeave={() => { setHovered('') }}
+         style={{ zIndex: '100' }}
+         onMouseOver={() => { notComplete && setHovered(id) }}
+         onMouseLeave={() => { notComplete && setHovered('') }}
          onClick={props.clickFunc}
-         fill={hovered === id ? HOVER_COLOR : FILL_COLOR}
+         fill={notComplete ? hovered === id ? HOVER_COLOR : FILL_COLOR : COMPLETE_COLOR}
          d="M 98.00,2005.00
          C 100.34,2005.77 102.55,2006.24 104.15,2008.30
            107.42,2012.52 104.26,2014.54 111.00,2018.00
@@ -665,12 +679,14 @@ const Landskap = (props) => {
    }
    const Varmland = () => {
       const id = "Varmland"
+     const notComplete = !props.completed.includes(id)
       return <path
          id={id}
-         onMouseOver={() => { setHovered(id) }}
-         onMouseLeave={() => { setHovered('') }}
+         style={{ zIndex: '100' }}
+         onMouseOver={() => { notComplete && setHovered(id) }}
+         onMouseLeave={() => { notComplete && setHovered('') }}
          onClick={props.clickFunc}
-         fill={hovered === id ? HOVER_COLOR : FILL_COLOR}
+         fill={notComplete ? hovered === id ? HOVER_COLOR : FILL_COLOR : COMPLETE_COLOR}
          d="M 175.00,1589.00
          C 175.00,1589.00 182.31,1612.00 182.31,1612.00
            183.12,1615.75 181.84,1617.83 182.31,1622.00
@@ -759,12 +775,14 @@ const Landskap = (props) => {
    }
    const Bohuslan = () => {
       const id = "Bohuslan"
+     const notComplete = !props.completed.includes(id)
       return <path
          id={id}
-         onMouseOver={() => { setHovered(id) }}
-         onMouseLeave={() => { setHovered('') }}
+         style={{ zIndex: '100' }}
+         onMouseOver={() => { notComplete && setHovered(id) }}
+         onMouseLeave={() => { notComplete && setHovered('') }}
          onClick={props.clickFunc}
-         fill={hovered === id ? HOVER_COLOR : FILL_COLOR}
+         fill={notComplete ? hovered === id ? HOVER_COLOR : FILL_COLOR : COMPLETE_COLOR}
          d="M 47.00,1984.00
               C 47.00,1984.00 43.00,1984.00 43.00,1984.00
                 43.00,1984.00 46.79,2000.00 46.79,2000.00
@@ -837,12 +855,14 @@ const Landskap = (props) => {
    }
    const Narke = () => {
       const id = "Narke"
+     const notComplete = !props.completed.includes(id)
       return <path
          id={id}
-         onMouseOver={() => { setHovered(id) }}
-         onMouseLeave={() => { setHovered('') }}
+         style={{ zIndex: '100' }}
+         onMouseOver={() => { notComplete && setHovered(id) }}
+         onMouseLeave={() => { notComplete && setHovered('') }}
          onClick={props.clickFunc}
-         fill={hovered === id ? HOVER_COLOR : FILL_COLOR}
+         fill={notComplete ? hovered === id ? HOVER_COLOR : FILL_COLOR : COMPLETE_COLOR}
          d="M 408.00,1923.00
          C 403.87,1923.19 387.28,1925.83 384.39,1927.93
            381.71,1929.88 378.00,1938.65 376.14,1942.00
@@ -891,12 +911,14 @@ const Landskap = (props) => {
    }
    const Vastmanland = () => {
       const id = "Vastmanland"
+     const notComplete = !props.completed.includes(id)
       return <path
          id={id}
-         onMouseOver={() => { setHovered(id) }}
-         onMouseLeave={() => { setHovered('') }}
+         style={{ zIndex: '100' }}
+         onMouseOver={() => { notComplete && setHovered(id) }}
+         onMouseLeave={() => { notComplete && setHovered('') }}
          onClick={props.clickFunc}
-         fill={hovered === id ? HOVER_COLOR : FILL_COLOR}
+         fill={notComplete ? hovered === id ? HOVER_COLOR : FILL_COLOR : COMPLETE_COLOR}
          d="M 575.00,1756.80
          C 574.71,1765.34 572.49,1763.60 567.21,1768.52
            564.12,1771.39 563.45,1774.32 560.79,1776.26
@@ -976,12 +998,14 @@ const Landskap = (props) => {
    }
    const Sodermanland = () => {
       const id = "Sodermanland"
+     const notComplete = !props.completed.includes(id)
       return <path
          id={id}
-         onMouseOver={() => { setHovered(id) }}
-         onMouseLeave={() => { setHovered('') }}
+         style={{ zIndex: '100' }}
+         onMouseOver={() => { notComplete && setHovered(id) }}
+         onMouseLeave={() => { notComplete && setHovered('') }}
          onClick={props.clickFunc}
-         fill={hovered === id ? HOVER_COLOR : FILL_COLOR}
+         fill={notComplete ? hovered === id ? HOVER_COLOR : FILL_COLOR : COMPLETE_COLOR}
          d="M 619.00,1898.00
          C 619.00,1898.00 607.00,1893.76 607.00,1893.76
            607.00,1893.76 599.00,1895.54 599.00,1895.54
@@ -1084,12 +1108,14 @@ const Landskap = (props) => {
    }
    const Uppland = () => {
       const id = "Uppland"
+     const notComplete = !props.completed.includes(id)
       return <path
          id={id}
-         onMouseOver={() => { setHovered(id) }}
-         onMouseLeave={() => { setHovered('') }}
+         style={{ zIndex: '100' }}
+         onMouseOver={() => { notComplete && setHovered(id) }}
+         onMouseLeave={() => { notComplete && setHovered('') }}
          onClick={props.clickFunc}
-         fill={hovered === id ? HOVER_COLOR : FILL_COLOR}
+         fill={notComplete ? hovered === id ? HOVER_COLOR : FILL_COLOR : COMPLETE_COLOR}
          d="M 595.00,1755.00
          C 595.00,1755.00 596.00,1771.00 596.00,1771.00
            596.00,1771.00 593.00,1771.00 593.00,1771.00
@@ -1176,12 +1202,14 @@ const Landskap = (props) => {
    }
    const Gastrikland = () => {
       const id = "Gastrikland"
+     const notComplete = !props.completed.includes(id)
       return <path
          id={id}
-         onMouseOver={() => { setHovered(id) }}
-         onMouseLeave={() => { setHovered('') }}
+         style={{ zIndex: '100' }}
+         onMouseOver={() => { notComplete && setHovered(id) }}
+         onMouseLeave={() => { notComplete && setHovered('') }}
          onClick={props.clickFunc}
-         fill={hovered === id ? HOVER_COLOR : FILL_COLOR}
+         fill={notComplete ? hovered === id ? HOVER_COLOR : FILL_COLOR : COMPLETE_COLOR}
          d="M 540.00,1677.00
          C 541.10,1680.86 544.08,1687.70 546.63,1690.74
            548.89,1693.43 550.37,1693.36 552.47,1697.05
@@ -1220,12 +1248,14 @@ const Landskap = (props) => {
    }
    const Dalarna = () => {
       const id = "Dalarna"
+     const notComplete = !props.completed.includes(id)
       return <path
          id={id}
-         onMouseOver={() => { setHovered(id) }}
-         onMouseLeave={() => { setHovered('') }}
+         style={{ zIndex: '100' }}
+         onMouseOver={() => { notComplete && setHovered(id) }}
+         onMouseLeave={() => { notComplete && setHovered('') }}
          onClick={props.clickFunc}
-         fill={hovered === id ? HOVER_COLOR : FILL_COLOR}
+         fill={notComplete ? hovered === id ? HOVER_COLOR : FILL_COLOR : COMPLETE_COLOR}
          d="M 193.00,1352.00
          C 193.00,1352.00 188.42,1378.00 188.42,1378.00
            188.42,1378.00 180.39,1422.00 180.39,1422.00
@@ -1333,12 +1363,14 @@ const Landskap = (props) => {
    }
    const Halsningland = () => {
       const id = "Halsningland"
+     const notComplete = !props.completed.includes(id)
       return <path
          id={id}
-         onMouseOver={() => { setHovered(id) }}
-         onMouseLeave={() => { setHovered('') }}
+         style={{ zIndex: '100' }}
+         onMouseOver={() => { notComplete && setHovered(id) }}
+         onMouseLeave={() => { notComplete && setHovered('') }}
          onClick={props.clickFunc}
-         fill={hovered === id ? HOVER_COLOR : FILL_COLOR}
+         fill={notComplete ? hovered === id ? HOVER_COLOR : FILL_COLOR : COMPLETE_COLOR}
          d="M 630.00,1588.00
          C 630.00,1588.00 628.35,1563.00 628.35,1563.00
            629.42,1557.77 637.00,1553.12 636.43,1544.00
@@ -1388,12 +1420,14 @@ const Landskap = (props) => {
    }
    const Hargedalen = () => {
       const id = "Hargedalen"
+     const notComplete = !props.completed.includes(id)
       return <path
          id={id}
-         onMouseOver={() => { setHovered(id) }}
-         onMouseLeave={() => { setHovered('') }}
+         style={{ zIndex: '100' }}
+         onMouseOver={() => { notComplete && setHovered(id) }}
+         onMouseLeave={() => { notComplete && setHovered('') }}
          onClick={props.clickFunc}
-         fill={hovered === id ? HOVER_COLOR : FILL_COLOR}
+         fill={notComplete ? hovered === id ? HOVER_COLOR : FILL_COLOR : COMPLETE_COLOR}
          d="M 180.00,1227.00
          C 181.20,1231.93 183.43,1252.52 182.48,1257.00
            182.48,1257.00 175.27,1281.00 175.27,1281.00
@@ -1447,12 +1481,14 @@ const Landskap = (props) => {
    }
    const Jamtland = () => {
       const id = "Jamtland"
+     const notComplete = !props.completed.includes(id)
       return <path
          id={id}
-         onMouseOver={() => { setHovered(id) }}
-         onMouseLeave={() => { setHovered('') }}
+         style={{ zIndex: '100' }}
+         onMouseOver={() => { notComplete && setHovered(id) }}
+         onMouseLeave={() => { notComplete && setHovered('') }}
          onClick={props.clickFunc}
-         fill={hovered === id ? HOVER_COLOR : FILL_COLOR}
+         fill={notComplete ? hovered === id ? HOVER_COLOR : FILL_COLOR : COMPLETE_COLOR}
          d="M 386.00,808.00
          C 386.00,808.00 378.09,819.00 378.09,819.00
            378.09,819.00 360.22,852.00 360.22,852.00
@@ -1563,12 +1599,14 @@ const Landskap = (props) => {
    }
    const Medelpad = () => {
       const id = "Medelpad"
+     const notComplete = !props.completed.includes(id)
       return <path
          id={id}
-         onMouseOver={() => { setHovered(id) }}
-         onMouseLeave={() => { setHovered('') }}
+         style={{ zIndex: '100' }}
+         onMouseOver={() => { notComplete && setHovered(id) }}
+         onMouseLeave={() => { notComplete && setHovered('') }}
          onClick={props.clickFunc}
-         fill={hovered === id ? HOVER_COLOR : FILL_COLOR}
+         fill={notComplete ? hovered === id ? HOVER_COLOR : FILL_COLOR : COMPLETE_COLOR}
          d="M 557.00,1274.00
          C 553.45,1273.19 548.38,1271.10 545.00,1271.42
            540.68,1271.83 537.58,1274.77 533.00,1274.72
@@ -1623,12 +1661,14 @@ const Landskap = (props) => {
    }
    const Angermanland = () => {
       const id = "Angermanland"
+     const notComplete = !props.completed.includes(id)
       return <path
          id={id}
-         onMouseOver={() => { setHovered(id) }}
-         onMouseLeave={() => { setHovered('') }}
+         style={{ zIndex: '100' }}
+         onMouseOver={() => { notComplete && setHovered(id) }}
+         onMouseLeave={() => { notComplete && setHovered('') }}
          onClick={props.clickFunc}
-         fill={hovered === id ? HOVER_COLOR : FILL_COLOR}
+         fill={notComplete ? hovered === id ? HOVER_COLOR : FILL_COLOR : COMPLETE_COLOR}
          d="M 523.00,1092.00
          C 516.80,1088.68 515.25,1086.12 508.00,1087.00
            508.00,1087.00 521.50,1108.00 521.50,1108.00
@@ -1714,12 +1754,14 @@ const Landskap = (props) => {
    }
    const Vasterbotten = () => {
       const id = "Vasterbotten"
+     const notComplete = !props.completed.includes(id)
       return <path
          id={id}
-         onMouseOver={() => { setHovered(id) }}
-         onMouseLeave={() => { setHovered('') }}
+         style={{ zIndex: '100' }}
+         onMouseOver={() => { notComplete && setHovered(id) }}
+         onMouseLeave={() => { notComplete && setHovered('') }}
          onClick={props.clickFunc}
-         fill={hovered === id ? HOVER_COLOR : FILL_COLOR}
+         fill={notComplete ? hovered === id ? HOVER_COLOR : FILL_COLOR : COMPLETE_COLOR}
          d="M 832.00,748.00
          C 832.00,748.00 822.86,769.00 822.86,769.00
            822.86,769.00 814.52,784.91 814.52,784.91
@@ -1780,12 +1822,14 @@ const Landskap = (props) => {
    }
    const Norrbotten = () => {
       const id = "Norrbotten"
+     const notComplete = !props.completed.includes(id)
       return <path
          id={id}
-         onMouseOver={() => { setHovered(id) }}
-         onMouseLeave={() => { setHovered('') }}
+         style={{ zIndex: '100' }}
+         onMouseOver={() => { notComplete && setHovered(id) }}
+         onMouseLeave={() => { notComplete && setHovered('') }}
          onClick={props.clickFunc}
-         fill={hovered === id ? HOVER_COLOR : FILL_COLOR}
+         fill={notComplete ? hovered === id ? HOVER_COLOR : FILL_COLOR : COMPLETE_COLOR}
          d="M 1040.00,196.00
          C 1040.00,196.00 1021.60,240.00 1021.60,240.00
            1021.60,240.00 1014.01,258.00 1014.01,258.00
@@ -1904,12 +1948,14 @@ const Landskap = (props) => {
    }
    const Lappland = () => {
       const id = "Lappland"
+     const notComplete = !props.completed.includes(id)
       return <path
          id={id}
-         onMouseOver={() => { setHovered(id) }}
-         onMouseLeave={() => { setHovered('') }}
+         style={{ zIndex: '100' }}
+         onMouseOver={() => { notComplete && setHovered(id) }}
+         onMouseLeave={() => { notComplete && setHovered('') }}
          onClick={props.clickFunc}
-         fill={hovered === id ? HOVER_COLOR : FILL_COLOR}
+         fill={notComplete ? hovered === id ? HOVER_COLOR : FILL_COLOR : COMPLETE_COLOR}
          d="M 805.00,48.00
          C 807.86,56.97 816.17,62.88 818.99,71.00
            818.99,71.00 821.82,88.00 821.82,88.00
