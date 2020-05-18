@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from 'react'
-const FILL_COLOR = "white"
+const FILL_COLOR = "Cornsilk"
 const HOVER_COLOR = "tomato"
 const COMPLETE_COLOR = "LightGreen"
-
 const Landskap = (props) => {
+   const [names, setNames] = useState([])
    useEffect(() => {
-      const ary = landskapComponents.map(elem => ({ name: elem.name, clicks: 0, completed: false }))
-      props.setGameArray(ary)
+      const ary = landskapComponents.map(elem => ({ name: elem.name.replace(/([A-Z])/g, ' $1').trim(), clicks: 0, completed: false }))
+      let shuffled = ary.map((a) => [Math.random(),a]).sort((a,b) => a[0]-b[0]).map((a) => a[1]);
+      props.setGameArray(shuffled)
    }, [])
-   const Skane = () => {
-      const id = "Skane"
+   const Skåne = () => {
+      const id = "Skåne"
       const notComplete = !props.completed.includes(id)
       return <path
          id={id}
@@ -145,9 +146,9 @@ const Landskap = (props) => {
            478.80,2466.39 480.94,2465.20 473.00,2463.00 Z"
       />
    }
-   const Oland = () => {
-      const id = "Oland"
-     const notComplete = !props.completed.includes(id)
+   const Öland = () => {
+      const id = "Öland"
+      const notComplete = !props.completed.includes(id)
       return <path
          id={id}
          style={{ zIndex: '100' }}
@@ -191,9 +192,9 @@ const Landskap = (props) => {
            605.45,2371.67 602.46,2382.58 602.00,2388.00 Z"
       />
    }
-   const Smaland = () => {
-      const id = "Smaland"
-     const notComplete = !props.completed.includes(id)
+   const Småland = () => {
+      const id = "Småland"
+      const notComplete = !props.completed.includes(id)
       return <path
          id={id}
          style={{ zIndex: '100' }}
@@ -326,7 +327,7 @@ const Landskap = (props) => {
    }
    const Gotland = () => {
       const id = "Gotland"
-     const notComplete = !props.completed.includes(id)
+      const notComplete = !props.completed.includes(id)
       return <path
          id={id}
          style={{ zIndex: '100' }}
@@ -385,7 +386,7 @@ const Landskap = (props) => {
    }
    const Halland = () => {
       const id = "Halland"
-     const notComplete = !props.completed.includes(id)
+      const notComplete = !props.completed.includes(id)
       return <path
          id={id}
          style={{ zIndex: '100' }}
@@ -445,11 +446,12 @@ const Landskap = (props) => {
            118.61,2254.78 118.93,2251.31 109.04,2250.82 Z"
       />
    }
-   const VasterGotland = () => {
-      const id = "VasterGotland"
-     const notComplete = !props.completed.includes(id)
+   const VästerGötland = () => {
+      const id = "Väster Götland"
+      const notComplete = !props.completed.includes(id)
       return <path
          id={id}
+         name={id}
          style={{ zIndex: '100' }}
          onMouseOver={() => { notComplete && setHovered(id) }}
          onMouseLeave={() => { notComplete && setHovered('') }}
@@ -544,9 +546,9 @@ const Landskap = (props) => {
            310.00,2013.99 296.00,2011.00 296.00,2011.00 Z"
       />
    }
-   const OsterGotland = () => {
-      const id = "OsterGotland"
-     const notComplete = !props.completed.includes(id)
+   const ÖsterGötland = () => {
+      const id = "Öster Götland"
+      const notComplete = !props.completed.includes(id)
       return <path
          id={id}
          style={{ zIndex: '100' }}
@@ -633,7 +635,7 @@ const Landskap = (props) => {
    }
    const Dalsland = () => {
       const id = "Dalsland"
-     const notComplete = !props.completed.includes(id)
+      const notComplete = !props.completed.includes(id)
       return <path
          id={id}
          style={{ zIndex: '100' }}
@@ -677,9 +679,9 @@ const Landskap = (props) => {
            99.95,1997.52 98.44,2002.15 98.00,2005.00 Z"
       />
    }
-   const Varmland = () => {
-      const id = "Varmland"
-     const notComplete = !props.completed.includes(id)
+   const Värmland = () => {
+      const id = "Värmland"
+      const notComplete = !props.completed.includes(id)
       return <path
          id={id}
          style={{ zIndex: '100' }}
@@ -775,7 +777,7 @@ const Landskap = (props) => {
    }
    const Bohuslan = () => {
       const id = "Bohuslan"
-     const notComplete = !props.completed.includes(id)
+      const notComplete = !props.completed.includes(id)
       return <path
          id={id}
          style={{ zIndex: '100' }}
@@ -853,9 +855,9 @@ const Landskap = (props) => {
       />
 
    }
-   const Narke = () => {
-      const id = "Narke"
-     const notComplete = !props.completed.includes(id)
+   const Närke = () => {
+      const id = "Närke"
+      const notComplete = !props.completed.includes(id)
       return <path
          id={id}
          style={{ zIndex: '100' }}
@@ -909,9 +911,9 @@ const Landskap = (props) => {
            403.01,1915.10 406.76,1920.41 408.00,1923.00 Z"
       />
    }
-   const Vastmanland = () => {
-      const id = "Vastmanland"
-     const notComplete = !props.completed.includes(id)
+   const Västmanland = () => {
+      const id = "Västmanland"
+      const notComplete = !props.completed.includes(id)
       return <path
          id={id}
          style={{ zIndex: '100' }}
@@ -996,9 +998,9 @@ const Landskap = (props) => {
            589.63,1753.64 578.49,1756.37 575.00,1756.80 Z"
       />
    }
-   const Sodermanland = () => {
-      const id = "Sodermanland"
-     const notComplete = !props.completed.includes(id)
+   const Södermanland = () => {
+      const id = "Södermanland"
+      const notComplete = !props.completed.includes(id)
       return <path
          id={id}
          style={{ zIndex: '100' }}
@@ -1108,7 +1110,7 @@ const Landskap = (props) => {
    }
    const Uppland = () => {
       const id = "Uppland"
-     const notComplete = !props.completed.includes(id)
+      const notComplete = !props.completed.includes(id)
       return <path
          id={id}
          style={{ zIndex: '100' }}
@@ -1200,9 +1202,9 @@ const Landskap = (props) => {
            605.76,1751.48 599.85,1754.61 595.00,1755.00 Z"
       />
    }
-   const Gastrikland = () => {
-      const id = "Gastrikland"
-     const notComplete = !props.completed.includes(id)
+   const Gästrikland = () => {
+      const id = "Gästrikland"
+      const notComplete = !props.completed.includes(id)
       return <path
          id={id}
          style={{ zIndex: '100' }}
@@ -1248,7 +1250,7 @@ const Landskap = (props) => {
    }
    const Dalarna = () => {
       const id = "Dalarna"
-     const notComplete = !props.completed.includes(id)
+      const notComplete = !props.completed.includes(id)
       return <path
          id={id}
          style={{ zIndex: '100' }}
@@ -1361,9 +1363,9 @@ const Landskap = (props) => {
            391.44,1600.75 392.63,1600.02 394.00,1599.00 Z"
       />
    }
-   const Halsningland = () => {
-      const id = "Halsningland"
-     const notComplete = !props.completed.includes(id)
+   const Hälsningland = () => {
+      const id = "Hälsningland"
+      const notComplete = !props.completed.includes(id)
       return <path
          id={id}
          style={{ zIndex: '100' }}
@@ -1418,9 +1420,9 @@ const Landskap = (props) => {
            584.00,1592.81 630.00,1588.00 630.00,1588.00 Z"
       />
    }
-   const Hargedalen = () => {
-      const id = "Hargedalen"
-     const notComplete = !props.completed.includes(id)
+   const Härgedalen = () => {
+      const id = "Härgedalen"
+      const notComplete = !props.completed.includes(id)
       return <path
          id={id}
          style={{ zIndex: '100' }}
@@ -1479,9 +1481,9 @@ const Landskap = (props) => {
            203.00,1221.13 180.00,1227.00 180.00,1227.00 Z"
       />
    }
-   const Jamtland = () => {
-      const id = "Jamtland"
-     const notComplete = !props.completed.includes(id)
+   const Jämtland = () => {
+      const id = "Jämtland"
+      const notComplete = !props.completed.includes(id)
       return <path
          id={id}
          style={{ zIndex: '100' }}
@@ -1599,7 +1601,7 @@ const Landskap = (props) => {
    }
    const Medelpad = () => {
       const id = "Medelpad"
-     const notComplete = !props.completed.includes(id)
+      const notComplete = !props.completed.includes(id)
       return <path
          id={id}
          style={{ zIndex: '100' }}
@@ -1659,9 +1661,9 @@ const Landskap = (props) => {
            563.38,1253.67 557.34,1258.62 557.00,1274.00 Z"
       />
    }
-   const Angermanland = () => {
-      const id = "Angermanland"
-     const notComplete = !props.completed.includes(id)
+   const Ångermanland = () => {
+      const id = "Ångermanland"
+      const notComplete = !props.completed.includes(id)
       return <path
          id={id}
          style={{ zIndex: '100' }}
@@ -1752,9 +1754,9 @@ const Landskap = (props) => {
            520.91,1064.00 523.00,1092.00 523.00,1092.00 Z"
       />
    }
-   const Vasterbotten = () => {
-      const id = "Vasterbotten"
-     const notComplete = !props.completed.includes(id)
+   const Västerbotten = () => {
+      const id = "Västerbotten"
+      const notComplete = !props.completed.includes(id)
       return <path
          id={id}
          style={{ zIndex: '100' }}
@@ -1822,7 +1824,7 @@ const Landskap = (props) => {
    }
    const Norrbotten = () => {
       const id = "Norrbotten"
-     const notComplete = !props.completed.includes(id)
+      const notComplete = !props.completed.includes(id)
       return <path
          id={id}
          style={{ zIndex: '100' }}
@@ -1948,7 +1950,7 @@ const Landskap = (props) => {
    }
    const Lappland = () => {
       const id = "Lappland"
-     const notComplete = !props.completed.includes(id)
+      const notComplete = !props.completed.includes(id)
       return <path
          id={id}
          style={{ zIndex: '100' }}
@@ -2137,15 +2139,14 @@ const Landskap = (props) => {
    }
 
    const [hovered, setHovered] = useState("")
-   const landskapComponents = [Skane, Blekinge, Oland, Smaland, Gotland, Halland, VasterGotland, Bohuslan, OsterGotland, Dalsland, Varmland, Narke, Vastmanland, Sodermanland, Uppland, Gastrikland, Dalarna, Halsningland, Hargedalen, Jamtland, Medelpad, Angermanland, Vasterbotten, Norrbotten, Lappland]
+   const landskapComponents = [Skåne, Blekinge, Öland, Småland, Gotland, Halland, VästerGötland, Bohuslan, ÖsterGötland, Dalsland, Värmland, Närke, Västmanland, Södermanland, Uppland, Gästrikland, Dalarna, Hälsningland, Härgedalen, Jämtland, Medelpad, Ångermanland, Västerbotten, Norrbotten, Lappland]
    return (
       <svg
          id="svg"
          xmlns="http://www.w3.org/2000/svg"
-         height="70vh"
+         height="80vh"
          viewBox="0 0 1200 2731">
          {landskapComponents.map((elem, index) => React.createElement(elem, { key: index }))}
-
       </svg>
    )
 }

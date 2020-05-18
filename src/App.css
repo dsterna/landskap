@@ -7,8 +7,18 @@
   color: antiquewhite;
   font-size: large;
 }
-.landskap-div {
 
+.left-div {
+  width: 20rem;
+  color: Cornsilk;
+  text-align: center;
+}
+.landskap-div {
+}
+.right-div {
+  width: 20rem;
+  color: Cornsilk;
+  text-align: center;
 }
 .wrapper {
   display: flex;
@@ -18,10 +28,10 @@
   flex-direction: row;
 }
 header {
-  height: 15vh;
+  height: 10vh;
 }
 footer {
-  height: 15vh;
+  height: 10vh;
 }
 
 @media (prefers-reduced-motion: no-preference) {

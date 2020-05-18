@@ -3,10 +3,19 @@ import './App.css';
 import React, { useEffect, useState } from 'react';
 
 import Landskap from './Landskap.js';
+import { useStopwatch } from 'react-timer-hook';
 
+const START_TEXT ="Klicka på valfritt landskap för att börja"
 function App() {
   const [gameArray, setGameArray] = useState([])
-  const [currentName, setCurrentName] = useState("Skane")
+  const [currentName, setCurrentName] = useState(START_TEXT)
+  const {
+    seconds,
+    minutes,
+    start,
+    pause,
+    reset,
+  } = useStopwatch({ autoStart: false });
   const [completed, setCompleted] = useState([])
 
   const getNewCurrent = () => {
@@ -14,13 +23,18 @@ function App() {
     if (currentObject) {
       setCurrentName(currentObject.name)
     }
-    else{
+    else {
       setCurrentName("BRA JOBBAT")
+      pause()
     }
   }
 
   const clickFunc = (e) => {
-    console.log(completed)
+    if (currentName === START_TEXT) {
+      setCurrentName(gameArray[0].name)
+      start()
+      return
+    }
     const wasCorrect = e.target.id === currentName
     setGameArray(gameArray.map(item => (item.name === e.target.id) ? { ...item, clicks: wasCorrect ? item.clicks : item.clicks + 1, completed: wasCorrect ? true : item.completed } : item))
     wasCorrect && getNewCurrent()
@@ -30,12 +44,20 @@ function App() {
     <div className="App">
       <header></header>
       <div className="wrapper">
-        <QuestionComponent currentName={currentName} />
+        <div className="left-div">
+          <QuestionComponent currentName={currentName} />
+        </div>
         <div className="landskap-div">
           <Landskap clickFunc={clickFunc} setGameArray={setGameArray} completed={completed} />
         </div>
-        <AnswerComponent gameArray={gameArray} currentName={currentName} />
+        <div className="right-div">
+          <AnswerComponent gameArray={gameArray} currentName={currentName} />
+          <h2>
+            Tid: <span>{minutes}</span>:<span>{seconds}</span>
+          </h2>
+        </div>
       </div>
+
       <footer></footer>
     </div>
   );
@@ -57,10 +79,9 @@ const AnswerComponent = (props) => {
   return (
     <div>
       <h2>
-        Antal fel:{countErrors()}
+        Antal fel: {countErrors()}
       </h2>
     </div>
   )
 }
-
 export default App;
