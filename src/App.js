@@ -35,6 +35,7 @@ function App() {
       start()
       return
     }
+
     const wasCorrect = e.target.id === currentName
     setGameArray(gameArray.map(item => (item.name === e.target.id) ? { ...item, clicks: wasCorrect ? item.clicks : item.clicks + 1, completed: wasCorrect ? true : item.completed } : item))
     wasCorrect && getNewCurrent()

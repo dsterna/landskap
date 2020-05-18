@@ -3,9 +3,8 @@ const FILL_COLOR = "Cornsilk"
 const HOVER_COLOR = "tomato"
 const COMPLETE_COLOR = "LightGreen"
 const Landskap = (props) => {
-   const [names, setNames] = useState([])
    useEffect(() => {
-      const ary = landskapComponents.map(elem => ({ name: elem.name.replace(/([A-Z])/g, ' $1').trim(), clicks: 0, completed: false }))
+      const ary = landskapComponents.map(elem => ({ name: elem.name, clicks: 0, completed: false }))
       let shuffled = ary.map((a) => [Math.random(),a]).sort((a,b) => a[0]-b[0]).map((a) => a[1]);
       props.setGameArray(shuffled)
    }, [])
@@ -446,8 +445,8 @@ const Landskap = (props) => {
            118.61,2254.78 118.93,2251.31 109.04,2250.82 Z"
       />
    }
-   const VästerGötland = () => {
-      const id = "Väster Götland"
+   const Västergötland = () => {
+      const id = "Västergötland"
       const notComplete = !props.completed.includes(id)
       return <path
          id={id}
@@ -546,8 +545,8 @@ const Landskap = (props) => {
            310.00,2013.99 296.00,2011.00 296.00,2011.00 Z"
       />
    }
-   const ÖsterGötland = () => {
-      const id = "Öster Götland"
+   const Östergötland = () => {
+      const id = "Östergötland"
       const notComplete = !props.completed.includes(id)
       return <path
          id={id}
@@ -1420,8 +1419,8 @@ const Landskap = (props) => {
            584.00,1592.81 630.00,1588.00 630.00,1588.00 Z"
       />
    }
-   const Härgedalen = () => {
-      const id = "Härgedalen"
+   const Härjedalen = () => {
+      const id = "Härjedalen"
       const notComplete = !props.completed.includes(id)
       return <path
          id={id}
@@ -2139,7 +2138,7 @@ const Landskap = (props) => {
    }
 
    const [hovered, setHovered] = useState("")
-   const landskapComponents = [Skåne, Blekinge, Öland, Småland, Gotland, Halland, VästerGötland, Bohuslan, ÖsterGötland, Dalsland, Värmland, Närke, Västmanland, Södermanland, Uppland, Gästrikland, Dalarna, Hälsningland, Härgedalen, Jämtland, Medelpad, Ångermanland, Västerbotten, Norrbotten, Lappland]
+   const landskapComponents = [Skåne, Blekinge, Öland, Småland, Gotland, Halland, Västergötland, Bohuslan, Östergötland, Dalsland, Värmland, Närke, Västmanland, Södermanland, Uppland, Gästrikland, Dalarna, Hälsningland, Härjedalen, Jämtland, Medelpad, Ångermanland, Västerbotten, Norrbotten, Lappland]
    return (
       <svg
          id="svg"
