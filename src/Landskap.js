@@ -5,7 +5,7 @@ const COMPLETE_COLOR = "LightGreen"
 const Landskap = (props) => {
    useEffect(() => {
       const ary = landskapComponents.map(elem => ({ name: elem.name, clicks: 0, completed: false }))
-      let shuffled = ary.map((a) => [Math.random(),a]).sort((a,b) => a[0]-b[0]).map((a) => a[1]);
+      let shuffled = ary.map((a) => [Math.random(), a]).sort((a, b) => a[0] - b[0]).map((a) => a[1]);
       props.setGameArray(shuffled)
    }, [])
    const Skåne = () => {

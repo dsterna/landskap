@@ -5,7 +5,7 @@ import React, { useEffect, useState } from 'react';
 import Landskap from './Landskap.js';
 import { useStopwatch } from 'react-timer-hook';
 
-const START_TEXT ="Klicka på valfritt landskap för att börja"
+const START_TEXT = "Klicka på valfritt landskap för att börja"
 function App() {
   const [gameArray, setGameArray] = useState([])
   const [currentName, setCurrentName] = useState(START_TEXT)
