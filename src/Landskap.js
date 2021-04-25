@@ -12,8 +12,8 @@ const Landskap = (props) => {
       const id = "Skåne"
       const notComplete = !props.completed.includes(id)
       return <path
+
          id={id}
-         style={{ zIndex: '100' }}
          onMouseOver={() => { notComplete && setHovered(id) }}
          onMouseLeave={() => { notComplete && setHovered('') }}
          onClick={props.clickFunc}
@@ -774,8 +774,8 @@ const Landskap = (props) => {
            194.34,1583.85 179.81,1587.41 175.00,1589.00 Z"
       />
    }
-   const Bohuslan = () => {
-      const id = "Bohuslan"
+   const Bohuslän = () => {
+      const id = "Bohuslän"
       const notComplete = !props.completed.includes(id)
       return <path
          id={id}
@@ -2138,7 +2138,7 @@ const Landskap = (props) => {
    }
 
    const [hovered, setHovered] = useState("")
-   const landskapComponents = [Skåne, Blekinge, Öland, Småland, Gotland, Halland, Västergötland, Bohuslan, Östergötland, Dalsland, Värmland, Närke, Västmanland, Södermanland, Uppland, Gästrikland, Dalarna, Hälsningland, Härjedalen, Jämtland, Medelpad, Ångermanland, Västerbotten, Norrbotten, Lappland]
+   const landskapComponents = [Skåne, Blekinge, Öland, Småland, Gotland, Halland, Västergötland, Bohuslän, Östergötland, Dalsland, Värmland, Närke, Västmanland, Södermanland, Uppland, Gästrikland, Dalarna, Hälsningland, Härjedalen, Jämtland, Medelpad, Ångermanland, Västerbotten, Norrbotten, Lappland]
    return (
       <svg
          id="svg"

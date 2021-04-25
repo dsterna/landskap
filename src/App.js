@@ -41,9 +41,17 @@ function App() {
     wasCorrect && getNewCurrent()
     wasCorrect && setCompleted([...completed, e.target.id])
   }
+  const changeGame = () => {
+console.log('Hej dag ')
+  }
+
   return (
     <div className="App">
-      <header></header>
+      <header>
+
+        <h1 style={{ textAlign: "center", paddingTop: "1rem" }} onClick={changeGame}>Sverige: Landskap</h1>
+
+      </header>
       <div className="wrapper">
         <div className="left-div">
           <QuestionComponent currentName={currentName} />
