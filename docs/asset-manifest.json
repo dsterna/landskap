@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "https://dsterna.github.io/landskap/static/css/main.8648ee91.chunk.css",
-    "main.js": "https://dsterna.github.io/landskap/static/js/main.54aa62a3.chunk.js",
-    "main.js.map": "https://dsterna.github.io/landskap/static/js/main.54aa62a3.chunk.js.map",
+    "main.css": "https://dsterna.github.io/landskap/static/css/main.58017d11.chunk.css",
+    "main.js": "https://dsterna.github.io/landskap/static/js/main.3f0179c3.chunk.js",
+    "main.js.map": "https://dsterna.github.io/landskap/static/js/main.3f0179c3.chunk.js.map",
     "runtime-main.js": "https://dsterna.github.io/landskap/static/js/runtime-main.76743c57.js",
     "runtime-main.js.map": "https://dsterna.github.io/landskap/static/js/runtime-main.76743c57.js.map",
-    "static/js/2.584ccf5e.chunk.js": "https://dsterna.github.io/landskap/static/js/2.584ccf5e.chunk.js",
-    "static/js/2.584ccf5e.chunk.js.map": "https://dsterna.github.io/landskap/static/js/2.584ccf5e.chunk.js.map",
+    "static/js/2.7617bc06.chunk.js": "https://dsterna.github.io/landskap/static/js/2.7617bc06.chunk.js",
+    "static/js/2.7617bc06.chunk.js.map": "https://dsterna.github.io/landskap/static/js/2.7617bc06.chunk.js.map",
     "index.html": "https://dsterna.github.io/landskap/index.html",
-    "precache-manifest.15d7383bf79c13dee41894d6eb882f01.js": "https://dsterna.github.io/landskap/precache-manifest.15d7383bf79c13dee41894d6eb882f01.js",
+    "precache-manifest.126aa6c768b18936f1a69d33a6ff52c6.js": "https://dsterna.github.io/landskap/precache-manifest.126aa6c768b18936f1a69d33a6ff52c6.js",
     "service-worker.js": "https://dsterna.github.io/landskap/service-worker.js",
-    "static/css/main.8648ee91.chunk.css.map": "https://dsterna.github.io/landskap/static/css/main.8648ee91.chunk.css.map",
-    "static/js/2.584ccf5e.chunk.js.LICENSE.txt": "https://dsterna.github.io/landskap/static/js/2.584ccf5e.chunk.js.LICENSE.txt"
+    "static/css/main.58017d11.chunk.css.map": "https://dsterna.github.io/landskap/static/css/main.58017d11.chunk.css.map",
+    "static/js/2.7617bc06.chunk.js.LICENSE.txt": "https://dsterna.github.io/landskap/static/js/2.7617bc06.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.76743c57.js",
-    "static/js/2.584ccf5e.chunk.js",
-    "static/css/main.8648ee91.chunk.css",
-    "static/js/main.54aa62a3.chunk.js"
+    "static/js/2.7617bc06.chunk.js",
+    "static/css/main.58017d11.chunk.css",
+    "static/js/main.3f0179c3.chunk.js"
   ]
 }
