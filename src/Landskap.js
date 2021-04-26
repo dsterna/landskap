@@ -3,11 +3,7 @@ const FILL_COLOR = "Cornsilk"
 const HOVER_COLOR = "tomato"
 const COMPLETE_COLOR = "LightGreen"
 const Landskap = (props) => {
-   useEffect(() => {
-      const ary = landskapComponents.map(elem => ({ name: elem.name, clicks: 0, completed: false }))
-      let shuffled = ary.map((a) => [Math.random(), a]).sort((a, b) => a[0] - b[0]).map((a) => a[1]);
-      props.setGameArray(shuffled)
-   }, [])
+
    const Skåne = () => {
       const id = "Skåne"
       const notComplete = !props.completed.includes(id)
@@ -2136,6 +2132,44 @@ const Landskap = (props) => {
            687.70,628.46 676.98,629.85 673.00,631.00 Z"
       />
    }
+
+   useEffect(() => {
+
+      const ary = [
+         { name: "Skåne", clicks: 0, completed: false },
+         { name: "Blekinge", clicks: 0, completed: false },
+         { name: "Öland", clicks: 0, completed: false },
+         { name: "Småland", clicks: 0, completed: false },
+         { name: "Gotland", clicks: 0, completed: false },
+         { name: "Halland", clicks: 0, completed: false },
+         { name: "Västergötland", clicks: 0, completed: false },
+         { name: "Bohuslän", clicks: 0, completed: false },
+         { name: "Östergötland", clicks: 0, completed: false },
+         { name: "Dalsland", clicks: 0, completed: false },
+         { name: "Värmland", clicks: 0, completed: false },
+         { name: "Närke", clicks: 0, completed: false },
+         { name: "Västmanland", clicks: 0, completed: false },
+         { name: "Södermanland", clicks: 0, completed: false },
+         { name: "Uppland", clicks: 0, completed: false },
+         { name: "Gästrikland", clicks: 0, completed: false },
+         { name: "Dalarna", clicks: 0, completed: false },
+         { name: "Hälsningland", clicks: 0, completed: false },
+         { name: "Härjedalen", clicks: 0, completed: false },
+         { name: "Jämtland", clicks: 0, completed: false },
+         { name: "Medelpad", clicks: 0, completed: false },
+         { name: "Ångermanland", clicks: 0, completed: false },
+         { name: "Västerbotten", clicks: 0, completed: false },
+         { name: "Norrbotten", clicks: 0, completed: false },
+         { name: "Lappland", clicks: 0, completed: false }]
+
+      let shuffled = ary.map((a) => [Math.random(), a]).sort((a, b) => a[0] - b[0]).map((a) => a[1]);
+
+      props.setGameArray(shuffled)
+
+
+   }, [])
+
+
 
    const [hovered, setHovered] = useState("")
    const landskapComponents = [Skåne, Blekinge, Öland, Småland, Gotland, Halland, Västergötland, Bohuslän, Östergötland, Dalsland, Värmland, Närke, Västmanland, Södermanland, Uppland, Gästrikland, Dalarna, Hälsningland, Härjedalen, Jämtland, Medelpad, Ångermanland, Västerbotten, Norrbotten, Lappland]
