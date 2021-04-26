@@ -1,6 +1,6 @@
 import './App.css';
 
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 import Landskap from './Landskap.js';
 import { useStopwatch } from 'react-timer-hook';
@@ -14,7 +14,6 @@ function App() {
     minutes,
     start,
     pause,
-    reset,
   } = useStopwatch({ autoStart: false });
   const [completed, setCompleted] = useState([])
 
@@ -42,16 +41,12 @@ function App() {
     wasCorrect && setCompleted([...completed, e.target.id])
   }
   const changeGame = () => {
-console.log('Hej dag ')
+    
   }
 
   return (
     <div className="App">
-      <header>
-
-        <h1 style={{ textAlign: "center", paddingTop: "1rem" }} onClick={changeGame}>Sverige: Landskap</h1>
-
-      </header>
+      <h1 className="header" onClick={changeGame}></h1>
       <div className="wrapper">
         <div className="left-div">
           <QuestionComponent currentName={currentName} />
@@ -60,14 +55,15 @@ console.log('Hej dag ')
           <Landskap clickFunc={clickFunc} setGameArray={setGameArray} completed={completed} />
         </div>
         <div className="right-div">
-          <AnswerComponent gameArray={gameArray} currentName={currentName} />
-          <h2>
+
+          {currentName !== START_TEXT && <div className="status">
+            <AnswerComponent gameArray={gameArray} currentName={currentName} />
             Tid: <span>{minutes}</span>:<span>{seconds}</span>
-          </h2>
+          </div>}
         </div>
       </div>
 
-      <footer></footer>
+
     </div>
   );
 }

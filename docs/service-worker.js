@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "https://dsterna.github.io/landskap/precache-manifest.879f07328822f82ca2b023491c3cb9b4.js"
+  "https://dsterna.github.io/landskap/precache-manifest.15d7383bf79c13dee41894d6eb882f01.js"
 );
 
 self.addEventListener('message', (event) => {
