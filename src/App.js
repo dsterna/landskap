@@ -24,15 +24,12 @@ function App() {
   }
 
   const clickFunc = (e) => {
-    console.log("in click func")
     if (currentName === START_TEXT) {
-      console.log("starting with ", gameArray[0].name)
       setCurrentName(gameArray[0].name)
       return
     }
 
     const wasCorrect = e.target.id === currentName
-    console.log("wasCorrect", wasCorrect)
     setGameArray(gameArray.map(item => (item.name === e.target.id) ? { ...item, clicks: wasCorrect ? item.clicks : item.clicks + 1, completed: wasCorrect ? true : item.completed } : item))
     wasCorrect && getNewCurrent()
     wasCorrect && setCompleted([...completed, e.target.id])

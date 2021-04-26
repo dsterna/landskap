@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "https://dsterna.github.io/landskap/static/css/main.58017d11.chunk.css",
-    "main.js": "https://dsterna.github.io/landskap/static/js/main.19e61583.chunk.js",
-    "main.js.map": "https://dsterna.github.io/landskap/static/js/main.19e61583.chunk.js.map",
+    "main.js": "https://dsterna.github.io/landskap/static/js/main.db8f946c.chunk.js",
+    "main.js.map": "https://dsterna.github.io/landskap/static/js/main.db8f946c.chunk.js.map",
     "runtime-main.js": "https://dsterna.github.io/landskap/static/js/runtime-main.76743c57.js",
     "runtime-main.js.map": "https://dsterna.github.io/landskap/static/js/runtime-main.76743c57.js.map",
     "static/js/2.7617bc06.chunk.js": "https://dsterna.github.io/landskap/static/js/2.7617bc06.chunk.js",
     "static/js/2.7617bc06.chunk.js.map": "https://dsterna.github.io/landskap/static/js/2.7617bc06.chunk.js.map",
     "index.html": "https://dsterna.github.io/landskap/index.html",
-    "precache-manifest.7fa2221e4e649cbcf1254dc00c154596.js": "https://dsterna.github.io/landskap/precache-manifest.7fa2221e4e649cbcf1254dc00c154596.js",
+    "precache-manifest.6b951fb0fa990205073a5a5c09ba7d6f.js": "https://dsterna.github.io/landskap/precache-manifest.6b951fb0fa990205073a5a5c09ba7d6f.js",
     "service-worker.js": "https://dsterna.github.io/landskap/service-worker.js",
     "static/css/main.58017d11.chunk.css.map": "https://dsterna.github.io/landskap/static/css/main.58017d11.chunk.css.map",
     "static/js/2.7617bc06.chunk.js.LICENSE.txt": "https://dsterna.github.io/landskap/static/js/2.7617bc06.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.76743c57.js",
     "static/js/2.7617bc06.chunk.js",
     "static/css/main.58017d11.chunk.css",
-    "static/js/main.19e61583.chunk.js"
+    "static/js/main.db8f946c.chunk.js"
   ]
 }

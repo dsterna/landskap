@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "30d0fb3e41e53710697c5377c9cb1eb4",
+    "revision": "9d3de24748c9e164626fbede7bf0f693",
     "url": "https://dsterna.github.io/landskap/index.html"
   },
   {
-    "revision": "da201f198dc9cbb054fc",
+    "revision": "ac140569526ca6a37ba2",
     "url": "https://dsterna.github.io/landskap/static/css/main.58017d11.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "https://dsterna.github.io/landskap/static/js/2.7617bc06.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "da201f198dc9cbb054fc",
-    "url": "https://dsterna.github.io/landskap/static/js/main.19e61583.chunk.js"
+    "revision": "ac140569526ca6a37ba2",
+    "url": "https://dsterna.github.io/landskap/static/js/main.db8f946c.chunk.js"
   },
   {
     "revision": "44cdf10f889378b1cc41",
