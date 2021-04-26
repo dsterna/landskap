@@ -43,8 +43,6 @@ footer {
   height: 10vh;
 }
 path:active{
-  transform: translateY(4px);
-  transform: translateX(4px);
   fill-opacity: 0.5;
 }
 

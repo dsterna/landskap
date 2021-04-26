@@ -1,6 +1,6 @@
 import './App.css';
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import Landskap from './Landskap.js';
 import { useStopwatch } from 'react-timer-hook';
@@ -9,12 +9,7 @@ const START_TEXT = "Klicka på valfritt landskap för att börja"
 function App() {
   const [gameArray, setGameArray] = useState([])
   const [currentName, setCurrentName] = useState(START_TEXT)
-  const {
-    seconds,
-    minutes,
-    start,
-    pause,
-  } = useStopwatch({ autoStart: false });
+  const [complete, setComplete] = useState(false)
   const [completed, setCompleted] = useState([])
 
   const getNewCurrent = () => {
@@ -23,15 +18,14 @@ function App() {
       setCurrentName(currentObject.name)
     }
     else {
+      setComplete(true)
       setCurrentName("BRA JOBBAT")
-      pause()
     }
   }
 
   const clickFunc = (e) => {
     if (currentName === START_TEXT) {
       setCurrentName(gameArray[0].name)
-      start()
       return
     }
 
@@ -41,7 +35,7 @@ function App() {
     wasCorrect && setCompleted([...completed, e.target.id])
   }
   const changeGame = () => {
-    
+
   }
 
   return (
@@ -58,7 +52,7 @@ function App() {
 
           {currentName !== START_TEXT && <div className="status">
             <AnswerComponent gameArray={gameArray} currentName={currentName} />
-            Tid: <span>{minutes}</span>:<span>{seconds}</span>
+            <TimeComponent complete={complete} />
           </div>}
         </div>
       </div>
@@ -74,6 +68,17 @@ const QuestionComponent = (props) => {
     </div>
   )
 }
+const TimeComponent = (props) => {
+  const [count, setCount] = useState(0)
+  useEffect(() => {
+    if (!props.done)
+      setTimeout(() => {
+        setCount(count + 1)
+      }, 1000);
+  }, [count])
+  return <span>Tid: {count}s</span>
+}
+
 const AnswerComponent = (props) => {
   const countErrors = () => {
     let count = 0
